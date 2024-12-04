@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #d6af0f;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 50px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 30px;
+      border: 5px solid #d6af0f;
+    }
+
+    .profile-text {
+      max-width: 600px;
+    }
+
+    .profile-text h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .profile-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-links a:hover {
+      color: #d6af0f;
+    }
+	
+	.active {
+  background-color: #04AA6D;
+}
+
+	
+	 
+	
+	
+
+</style>
+
+<body>	
+
+<!-- Navbar -->
+<header>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html" target="_blank">About Me</a>
+      <a href="portfolio.html" target="_blank">Portfolio</a>
+	  <a href="extraskill.html" target="_blank">Extra-Curricular & Skills</a>
+      <a href="resume.html" target="_blank">Resume</a>
+      <a class="active" href="contact.html" target="_blank">Contact</a>
+    </div>
+</header>
+
+<!-- Profile Section -->
+<section class="profile-section">
+    <img src="arief.jpg" alt="Profile Image" class="profile-image">
+    <div class="profile-text">
+        <h1 style="color:#f17745;">Ahmad Arief Izzuddin Bin Ahmad Aziziddin</h1>
+        <p style="color:#f17745;"><strong>UITM Kedah Kampus Sungai Petani</strong></p>
+        <p>Hello! I am a Library Management student at Universiti Teknologi MARA (UiTM) Kedah, with a keen interest in organizing and managing information to make knowledge accessible and useful. My studies focus on building skills in areas like cataloging, digital resource management, and information retrieval, preparing me for a career in library and information science.
+If you’d like to learn more about my work, discuss potential collaborations, or simply connect, please feel free to reach out! I am always open to networking and sharing ideas with others who are passionate about the world of information management.</p>
+        <button onclick="window.location.href='contact.html'" style="padding:10px 20px; background-color:#d6af0f; border:none; color:white; border-radius:4px; cursor:pointer;">Contact Me</button>
+    </div
+	
+	
+	
+	<section style="padding: 20px; margin: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="color: #333; text-align: center;">Get in Touch</h2>
+    <form action="submit_form.php" method="post" style="max-width: 600px; margin: 0 auto;">
+        <label for="name" style="display: block; margin-top: 10px; color: #333;">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required 
+               style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        
+        <label for="email" style="display: block; margin-top: 10px; color: #333;">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required 
+               style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        
+        <label for="subject" style="display: block; margin-top: 10px; color: #333;">Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter the subject of your message" required 
+               style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
+        
+        <label for="message" style="display: block; margin-top: 10px; color: #333;">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here" required 
+                  style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+        
+        <button type="submit" style="margin-top: 15px; padding: 10px 20px; background-color: #d6af0f; border: none; color: white; border-radius: 4px; cursor: pointer;">Send Message</button>
+    </form>
+	
+	
+</section>
+
+
+	
+<footer>
+    <p>&copy; 2024 Ahmad Arief Izzuddin Bin Ahmad Aziziddin | Connect with me:</p>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/arief-izzuddin-32028830a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apphttps://www.linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Arief260" target="_blank">GitHub</a> |
+        <a href="https://www.instagram.com/ariefizzuddin16/profilecard/?igsh=MWY4YWl4aHVueHNuZQ==" target="_blank">Instagram</a>
+    </div>
+</footer>
+	
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - E-Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #d6af0f;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 50px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 30px;
+      border: 5px solid #d6af0f;
+    }
+
+    .profile-text {
+      max-width: 600px;
+    }
+
+    .profile-text h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .profile-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-links a:hover {
+      color: #d6af0f;
+    }
+	
+	.active {
+  background-color: #04AA6D;
+}
+
+		
+	.map-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Map iframe styling */
+        .map-iframe {
+            border: 0;
+            width: 600px;
+            height: 400px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+	 #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Hidden by default */
+            width: 50px;
+            height: 50px;
+            background-color: #cfcc2d;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+
+</style>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="navbar">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html" target="_blank">About Me</a>
+      <a href="portfolio.html" target="_blank">Portfolio</a>
+	  <a href="extraskill.html" target="_blank">Extra-Curricular & Skills</a>
+      <a href="resume.html" target="_blank">Resume</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </div>
+</header>
+
+
+	<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Show the button when the user scrolls down 100px from the top of the page
+    window.onscroll = function() { showScrollButton() };
+
+    function showScrollButton() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }
+
+    // Smooth scroll to the top when the button is clicked
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+
+	<header id="top">
+    <h1>Welcome to My Personal Website</h1>
+</header>
+
+
+
+
+
+<section class="profile-section">
+    <img src="arief.jpg" alt="Profile Image" class="profile-image">
+    <div class="profile-text">
+        <h1 style="color:#f17745;">Ahmad Arief Izzuddin Bin Ahmad Aziziddin</h1>
+        <p style="color:#f17745;"><strong>UITM Kedah Kampus Sungai Petani</strong></p>
+        <p>My name is Ahmad Arief Izzuddin Bin Ahmad Aziziddin. I am 21 years old and from Seri Iskandar, Perak. For the course that I take in this semester, which is IMS561, the purpose of this website is for individual assignment and prepared for Sir Mahadi Mahmood.</p>
+        <button onclick="window.location.href='contact.html'" style="padding:10px 20px; background-color:#d6af0f; border:none; color:white; border-radius:4px; cursor:pointer;">Contact Me</button>
+    </div>
+</section>
+
+<br>
+
+	<div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3633.9928662923176!2d100.44790707498632!3d5.713847994268122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304b28adfa3c0e53%3A0xe310799cc09dac88!2sUiTM%20Kedah!5e1!3m2!1sen!2smy!4v1731388059436!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+	</iframe> 
+        
+    
+</div>
+
+<br><br>
+
+
+
+<footer>
+    <p>&copy; 2024 Ahmad Arief Izzuddin Bin Ahmad Aziziddin | Connect with me:</p>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/arief-izzuddin-32028830a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apphttps://www.linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Arief260" target="_blank">GitHub</a> |
+        <a href="https://www.instagram.com/ariefizzuddin16/profilecard/?igsh=MWY4YWl4aHVueHNuZQ==" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>

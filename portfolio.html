@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+	
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+</style>
+</head>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #d6af0f;
+    }
+
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 50px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-right: 30px;
+      border: 5px solid #d6af0f;
+    }
+
+    .profile-text {
+      max-width: 600px;
+    }
+
+    .profile-text h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .profile-text p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .footer-links a:hover {
+      color: #d6af0f;
+    }
+	
+	.active {
+  background-color: #04AA6D;
+}
+</style>
+
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pdf-list {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .pdf-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: background-color 0.3s;
+        }
+
+        .pdf-item:hover {
+            background-color: #f1f1f1;
+        }
+
+        .pdf-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .pdf-link {
+            font-size: 1.1em;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .pdf-link:hover {
+            text-decoration: underline;
+        }
+		
+		 /* Style for the scroll-to-top button */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none; /* Hidden by default */
+            width: 50px;
+            height: 50px;
+            background-color: #cfcc2d;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #555;
+        }
+		
+	.video-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Style for the video player */
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Add overlay text */
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect for overlay */
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+
+        /* Custom play button style */
+        .play-button {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Show play button when overlay is visible */
+        .video-container:hover .play-button {
+            display: block;
+        }
+    </style>
+		
+    </style>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html" target="_blank">About Me</a>
+      <a class="active" href="portfolio.html" target="_blank">Portfolio</a>
+	  <a href="extraskill.html" target="_blank">Extra-Curricular & Skills</a>
+      <a href="resume.html" target="_blank">Resume</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </div>
+</header>
+
+<!-- Profile Section -->
+<section class="profile-section">
+    <img src="arief.jpg" alt="Profile Image" class="profile-image">
+    <div class="profile-text">
+        <h1 style="color:#f17745;">My Portfolio</h1>
+        <p style="color:#f17745;"><strong>UITM Kedah Kampus Sungai Petani</strong></p>
+        <p>As a Bachelor of Library Management student at Universiti Teknologi MARA (UiTM) Kedah, I am gaining a strong foundation in managing, organizing, and preserving information across various formats. My studies cover essential topics like cataloging, classification, database management, and digital resources, which prepare me for a career in today’s information-rich environment.
+	<br><p>
+This portfolio showcases my academic projects, skills, and hands-on experience in library and information management. It includes examples of my work in cataloging, digital archiving, research, and web content management, reflecting my journey and growth in the field. Through these projects, I aim to demonstrate my dedication to efficient information management and my readiness to contribute to modern library services.</p>
+	   <button onclick="window.location.href='contact.html'" style="padding:10px 20px; background-color:#d6af0f; border:none; color:white; border-radius:4px; cursor:pointer;">Contact Me</button>
+   </div>
+</section>
+<br>
+
+	<h2><u>My PDF Portfolio</u></h2>
+
+<div class="pdf-list">
+    <div class="pdf-item">
+        <img src="pdf.png" alt="PDF Icon" class="pdf-icon">
+        <a href="portfolio1.pdf" target="_blank" class="pdf-link">COVER LETTER RESUME</a>
+    </div>
+
+    <div class="pdf-item">
+        <img src="pdf.png" alt="PDF Icon" class="pdf-icon">
+        <a href="portfolio3.pdf" target="_blank" class="pdf-link">Perpustakaan Tun Abdul Razak UiTM Seri Iskandar</a>
+    </div>
+	
+	<div class="pdf-item">
+        <img src="pdf.png" alt="PDF Icon" class="pdf-icon">
+        <a href="portfolio4.pdf" target="_blank" class="pdf-link">Sukarelawan Perpustakaan</a>
+    </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+    // Show the button when the user scrolls down 100px from the top of the page
+    window.onscroll = function() { showScrollButton() };
+
+    function showScrollButton() {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    }
+
+    // Smooth scroll to the top when the button is clicked
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+
+	<h2><u>Video Assignment</u></h2>
+
+	<div class="video-container">
+    <video id="myVideo" poster="thumbnail.jpg">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay" onclick="togglePlay()">
+        Click to Play/Pause
+        <div class="play-button">▶</div>
+    </div>
+</div>
+
+<script>
+    // Toggle play/pause on video click
+    function togglePlay() {
+        const video = document.getElementById("myVideo");
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+</script>
+
+
+
+<footer>
+    <p>&copy; 2024 Ahmad Arief Izzuddin Bin Ahmad Aziziddin | Connect with me:</p>
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/arief-izzuddin-32028830a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_apphttps://www.linkedin.com" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/Arief260" target="_blank">GitHub</a> |
+        <a href="https://www.instagram.com/ariefizzuddin16/profilecard/?igsh=MWY4YWl4aHVueHNuZQ==" target="_blank">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>
